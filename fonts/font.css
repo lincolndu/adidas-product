@@ -1,0 +1,17 @@
+@font-face {
+  font-family: '729-font';
+  src: url('729-font.eot');
+  src: url('729-font.eot?#iefix') format('embedded-opentype'),
+       url('729-font.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AdihausDIN-Cn';
+  src: url('AdihausDIN-Cn.ttf') format('truetype'),
+       url('AdihausDIN-Cn.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
