@@ -1,7 +1,3 @@
-/*
-	Theme for Ashiq
-*/
-
 @font-face {
   font-family: '729-font';
   src: url("./fonts/729-font.eot");
@@ -35,15 +31,10 @@ a:hover {
   padding: 0;
 }
 
-.acurate .shop:hover{
+/*.acurate .shop:hover{
   border: 1px solid red;
   z-index: 99;
-}
-
-.container {
-  width: 1540px;
-  max-width: 100%;
-}
+}*/
 
 body {
   font-family: AdihausDIN,Helvetica,Arial,sans-serif;
@@ -69,51 +60,60 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0;
 }
 
-.small-shop-area .shop {
+.small-shop-area .product_area {
   border: 1px solid #ffffff;
-  transition: all 0.3s ease-in-out;
   margin: 10px 0 0px;
-  position: relative;
+  padding:0;
 }
-.small-shop-area .shop:hover {
-  /* transition: all 0.3s ease-in-out; */
 
+
+.small-shop-area .product_area .shop {
+  transition: all 0.3s ease-in-out;
+  background: #fff;
+  width: 100%;
+  border: 1px solid transparent;
+  z-index: 99;
+  left: 0;
 }
-.small-shop-area .shop:hover .extra-products .nav {
+.small-shop-area .product_area:hover .shop{
+  position: absolute;
+  left: 0;
+  border:1px solid #000;
+}
+
+.small-shop-area .product_area:hover .extra-products .nav {
   display: block;
   width: 100%;
-  /*bottom: -113px;*/
 }
-.small-shop-area .shop:hover .extra-products .product-info {
-  /*bottom: -237px;*/
-}
-.small-shop-area .shop .tab-content {
+
+.small-shop-area .product_area .shop .tab-content {
   overflow: hidden;
   position: relative;
+  margin-bottom: 10px;
 }
-.small-shop-area .shop .tab-content .tab-pane .images {
+.small-shop-area .product_area .shop .tab-content .tab-pane .images {
   width: 100%;
   transition: all 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
 }
-.small-shop-area .shop .tab-content .tab-pane .images .bucket {
+.small-shop-area .product_area .shop .tab-content .tab-pane .images .bucket {
   position: absolute;
   right: 15px;
   top: 15px;
 }
-.small-shop-area .shop .tab-content .tab-pane .images img {
+.small-shop-area .product_area .shop .tab-content .tab-pane .images img {
   width: 100%;
 }
-.small-shop-area .shop .tab-content .tab-pane .images .original-image {
+.small-shop-area .product_area .shop .tab-content .tab-pane .images .original-image {
   transition: all 0.3s ease-in-out;
   display: block;
 }
-.small-shop-area .shop .tab-content .tab-pane .images .hover-image {
+.small-shop-area .product_area .shop .tab-content .tab-pane .images .hover-image {
   display: none;
   transition: all 0.3s ease-in-out;
 }
-.small-shop-area .shop .tab-content .tab-pane .images:hover .original-image {
+.small-shop-area .product_area .shop .tab-content .tab-pane .images:hover .original-image {
   transition: all 0.3s ease-in-out;
   display: none;
 }
@@ -121,37 +121,23 @@ h1, h2, h3, h4, h5, h6, p {
   display: block;
   transition: all 0.3s ease-in-out;
 }
-.small-shop-area .shop .extra-products {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
+.small-shop-area .shop .extra-products {width: 100%;}
 .small-shop-area .shop .extra-products .nav {
   transition: all 0.3s ease-in-out;
-  margin: 0 0 10px;
-  padding: 0 0 10px;
-  border: none;
+  margin-bottom:10px;
   background: #ECEFF1;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -113px;
+  position: relative;
   z-index: 999;
-  width: 0;
   height: 100px;
-  /* border-left: 1px solid #ffffff;
-  border-right: 1px solid #ffffff; */
   display: none;
 }
 .small-shop-area .shop .extra-products .nav li {
   display: inline-block;
-  /*border: none;*/
   margin: 0;
   padding: 0;
 }
 .small-shop-area .shop .extra-products .nav li a {
   display: inline-block;
-  /*border: none;*/
   margin: 0 0 10px;
   padding: 0 0 10px;
   position: relative;
@@ -182,14 +168,10 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .small-shop-area .shop .extra-products .product-info {
   padding: 10px;
-  position: absolute;
+  position: relative;
   z-index: 99;
   background: #fff;
   width: 100%;
-  bottom: -136px;
-/*  border-left: 1px solid #ffffff;
-  border-right: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;*/
 }
 .small-shop-area .shop .extra-products .product-info span {
   color: #767677;
